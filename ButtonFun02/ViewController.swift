@@ -15,18 +15,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblCount: UILabel!
     
     var count = 0
+    var checked = 0
     
     override func viewDidLoad() {   super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         lblCount.text = String(count)
     }
+    
     @IBAction func buttonA(_ sender: Any) {
         lblA.text = "안녕여엉ㅇ"
-        count = count+1
-        if (count == 10){
-            count = 0
-            
+        if(checked == 0){
+            count = count+1
+            if(count == 10){
+                checked = 1
+            }
+            }
+        if(checked == 1){
+            count = count - 1
+            if(count == 0){
+                checked = 0
+            }
         }
+        
+        
+        
         lblCount.text = String(count)
     }
     @IBAction func ButtonB(_ sender: Any) {
