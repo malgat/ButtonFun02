@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     @IBAction func buttonA(_ sender: Any) {
         lblA.text = "안녕여엉ㅇ"
         count = count+1
+        if (count == 10){
+            count = 0
+        }
         lblCount.text = String(count)
     }
     @IBAction func ButtonB(_ sender: Any) {
