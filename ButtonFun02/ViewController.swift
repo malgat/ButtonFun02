@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   
+    @IBOutlet weak var lblA: UILabel!
+    @IBOutlet weak var lblB: UILabel!
+    @IBOutlet weak var lblCount: UILabel!
+    
+    var count = 0
+    
+    override func viewDidLoad() {   super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        lblCount.text = String(count)
     }
-
-
+    @IBAction func buttonA(_ sender: Any) {
+        lblA.text = "안녕여엉ㅇ"
+        count = count+1
+        lblCount.text = String(count)
+    }
+    @IBAction func ButtonB(_ sender: Any) {
+        lblB.text = "B를 눌렀습니다."
+    }
+    
 }
-
